@@ -1,4 +1,4 @@
-# docker-armhf-alpine-java
+# docker-armhf-alpine-jdk
 
 Alpine base docker image, plus Oracle JDK 8, for `armhf` devices (RPi 2/3, etc..)
 
