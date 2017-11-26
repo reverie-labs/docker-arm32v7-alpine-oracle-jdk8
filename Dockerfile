@@ -3,10 +3,10 @@ MAINTAINER Guto Andreollo <gutoandreollo@users.noreply.github.com>
 # ORIGINAL MAINTAINER Maxime Tricoire <max.tricoire@gmail.com> (https://hub.docker.com/r/maxleiko/armhf-alpine-java/)
 
 # the WGET script below is adapted from courtesy of https://gist.github.com/P7h/9741922
-ENV ORACLE_MAGIC_STRING=090f390dda5b47b9b721c7dfaa008135 \
+ENV ORACLE_MAGIC_STRING=e758a0de34e24606bca991d704f6dcbf \
     JAVA_VERSION=8 \
-    JAVA_UPDATE=144 \
-    JAVA_BUILD=01 \
+    JAVA_UPDATE=151 \
+    JAVA_BUILD=12 \
     JAVA_HOME="/opt/jdk" \
     PATH=$PATH:${PATH}:/opt/jdk/bin
 
