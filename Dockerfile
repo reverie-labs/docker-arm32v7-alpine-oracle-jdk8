@@ -2,6 +2,11 @@ FROM resin/armhf-alpine
 MAINTAINER Guto Andreollo <gutoandreollo@users.noreply.github.com>
 # ORIGINAL MAINTAINER Maxime Tricoire <max.tricoire@gmail.com> (https://hub.docker.com/r/maxleiko/armhf-alpine-java/)
 
+# This image uses cross-build to build on x86_64 hosts. See details on
+# https://resin.io/blog/building-arm-containers-on-any-x86-machine-even-dockerhub/
+
+RUN [ "cross-build-start" ]
+
 # the WGET script below is adapted from courtesy of https://gist.github.com/P7h/9741922
 ENV ORACLE_MAGIC_STRING=e758a0de34e24606bca991d704f6dcbf \
     JAVA_VERSION=8 \
@@ -42,6 +47,8 @@ RUN apk --no-cache add bash wget ca-certificates \
            $JAVA_HOME/jre/bin/tnameserv \
            $JAVA_HOME/jre/bin/unpack200 \
  && apk del wget ca-certificates 
+
+RUN [ "cross-build-end" ]
 
 # Define default command.
 CMD ["bash"]
